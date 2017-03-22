@@ -1,0 +1,32 @@
+@import "./constant.less";
+// page into
+.page-slide-left-leave {
+    opacity: 0;
+    transition-delay: .4s;
+}
+.page-slide-left-leave-active {
+    opacity: 0;
+    transition-delay: .4s;
+}
+.page-slide-left-enter {
+    transform: translateX(750/@g);
+}
+.page-slide-left-enter-active {
+
+}
+
+// page leave
+.page-slide-right-leave {
+    z-index: 2;
+}
+.page-slide-right-leave-active {
+    transform: translateX(750/@g);
+    z-index: 2;
+}
+
+.page-slide-right-enter {
+    z-index: 1;
+}
+.page-slide-right-enter-active {
+    z-index: 1;
+}
