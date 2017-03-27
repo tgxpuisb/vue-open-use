@@ -2,13 +2,16 @@
 // page into
 .page-slide-left-leave {
     opacity: 0;
+    -webkit-transition-delay: .4s;
     transition-delay: .4s;
 }
 .page-slide-left-leave-active {
     opacity: 0;
+    -webkit-transition-delay: .4s;
     transition-delay: .4s;
 }
 .page-slide-left-enter {
+    -webkit-transform: translateX(750/@g);
     transform: translateX(750/@g);
 }
 .page-slide-left-enter-active {
@@ -18,10 +21,20 @@
 // page leave
 .page-slide-right-leave {
     z-index: 2;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
 }
 .page-slide-right-leave-active {
+    -webkit-transform: translateX(750/@g);
     transform: translateX(750/@g);
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
     z-index: 2;
+}
+.page-slide-right-leave-to {
+
 }
 
 .page-slide-right-enter {

@@ -41,3 +41,23 @@ export function isSupportWebp () {
     const canvas = document.createElement('canvas')
     return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
 }
+
+export function toString (o) {
+    return Object.prototype.toString.call(o)
+}
+
+export function getBrowserPrefix () {
+    let docStyle = document.documentElement.style
+
+    if (window.opera && toString(window.opera) === '[object Opera]') {
+        return 'O'
+    } else if ('MozAppearance' in docStyle) {
+        return 'Moz'
+    } else if ('WebkitAppearance' in docStyle) {
+        return 'Webkit'
+    } else if (typeof window.navigator.cpuClass === 'string') {
+        return 'ms'
+    } else {
+        return ''
+    }
+}

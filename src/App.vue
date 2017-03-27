@@ -24,7 +24,7 @@
     }
 </script>
 
-<style>
+<style rel="stylesheet/less" lang="less">
     @import "./assets/less/page.less";
     #app{
         width: 100%;
@@ -38,7 +38,6 @@
         right: 0;
         bottom: 0;
         overflow: hidden;
-        z-index: 2;
         opacity: 1;
         width: 100%;
         height: 100%;
