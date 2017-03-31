@@ -38,8 +38,13 @@ export function getScrollParent (el){
 }
 
 export function isSupportWebp () {
+    if (isSupportWebp.webp !== undefined) {
+        return isSupportWebp.webp
+    }
     const canvas = document.createElement('canvas')
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
+    const result = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
+    isSupportWebp.webp = result
+    return result
 }
 
 export function toString (o) {
